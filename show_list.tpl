@@ -1,5 +1,6 @@
 <html>
 <head>
+<<<<<<< HEAD
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
@@ -7,6 +8,14 @@
 <body>
 <h3 class="w3-block w3-teal w3-center">Kristi's Todo List, version 1.1</h3>
 <hr/>
+=======
+<title>Todo List 0.001</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://www.w3schools.com/w3css/4/w3.css" rel="stylesheet" >
+</head>
+<body>
+<h3 class="w3-block w3-teal w3-center">Basic Todo List, version 1.1</h3>
+>>>>>>> 235f210f2d3918628a1a0728333ca110cf4b30dc
 <table class="w3-table w3-bordered w3-border">
 %for row in rows:
     <tr>
@@ -29,7 +38,10 @@
     </tr>
 %end
 </table>
+<<<<<<< HEAD
 <hr/>
+=======
+>>>>>>> 235f210f2d3918628a1a0728333ca110cf4b30dc
 <a href="/new_item"><button class="w3-button w3-block w3-teal">New item...</button></a>
 </body>
 </html>

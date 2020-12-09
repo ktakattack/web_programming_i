@@ -1,24 +1,34 @@
-<h3>Kristi's Todo List, version 1.1</h3>
-<hr/>
-<table border="1">
+<html>
+<head>
+<title>Todo List 0.001</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://www.w3schools.com/w3css/4/w3.css" rel="stylesheet" >
+</head>
+<body>
+%include("header.tpl", session=session)
+<table class="w3-table w3-bordered w3-border">
+>>>>>>> upstream/master
 %for row in rows:
     <tr>
-        <td>{{str(row[0])}}</td>
         <td>
-            <a href="/update_item/{{row[0]}}">{{row[1]}}</a>
+            <a href="/update_task/{{row['id']}}"><i class="material-icons">edit</i></a>
         </td>
         <td>
-        %if row[2]==0:
-            <a href="/set_status/{{row[0]}}/1">[ {{str(row[2])}} ]</a>
+            {{row['task']}}
+        </td>
+        <td>
+        %if row['status']==0:
+            <a href="/update_status/{{row['id']}}/1"><i class="material-icons">check_box_outline_blank</i></a>
         %else:
-            <a href="/set_status/{{row[0]}}/0">[ {{str(row[2])}} ]</a>
+            <a href="/update_status/{{row['id']}}/0"><i class="material-icons">check_box</i></a>
         %end
         </td>
         <td>
-            <a href="/delete_item/{{row[0]}}">DELETE</a>
+            <a href="/delete_item/{{row['id']}}"><i class="material-icons">delete</i></a>
         </td>
     </tr>
 %end
 </table>
-<hr/>
-<a href="/new_item">New Item... :-)</a>
+%include("footer.tpl", session=session)
+</body>
+</html>

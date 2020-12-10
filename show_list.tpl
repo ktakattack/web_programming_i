@@ -7,7 +7,7 @@
 <body>
 %include("header.tpl", session=session)
 <table class="w3-table w3-bordered w3-border">
->>>>>>> upstream/master
+
 %for row in rows:
     <tr>
         <td>
